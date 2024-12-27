@@ -1,0 +1,68 @@
+.block {
+
+    &_4 {
+        
+    }
+}
+
+.article {
+    width: 100%;
+
+} 
+
+.article-text {
+
+    margin: 20px 30px;
+    padding: 15px;
+    border-radius: 10px;
+
+		&_heading {
+            font-weight: bold;
+		}
+        
+        &_element{
+            font-size: 14px;
+            width: 35%;
+            
+            color: black;
+        }
+
+		&_link {
+            color: black;
+            font-size: 20px;
+
+            &:hover{
+                color: #5161af;
+            }
+		}
+
+		&_map {
+            margin-left: 25px;
+            width: 65%;
+            
+		}
+
+        &_info{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+}
+
+.map-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 1px solid #5161af;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+area {
+    cursor: pointer; 
+    outline: none; 
+}
+
+area:hover {
+    outline: 2px solid rgba(0, 123, 255, 0.5);
+}

@@ -1,0 +1,78 @@
+.block {
+
+    &_5 {
+
+    }
+}
+.container {
+
+    &_content {
+        padding: 20px;
+    }
+}
+
+.content {
+
+    &_title {
+        color: black;
+        padding: 3px;
+        font-size: 16px;
+        text-transform: capitalize;
+        margin-top: 30px;
+    }
+
+    &_body {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    &_body-item {
+        
+    }
+}
+
+.what-is {
+
+}
+
+.landscape-subjects {
+
+}
+
+.list {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &_item {
+        margin: 10px 2px;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ccc;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+        
+    }
+
+    &_text {
+        font-size: 12px;
+        color: #7c9cc5;
+        text-align: center;
+        font-weight: 900;
+        padding: 10px;
+    
+    }
+
+    &_img {
+        width: 50px;
+    }
+}

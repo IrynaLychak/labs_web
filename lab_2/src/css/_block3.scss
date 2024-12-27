@@ -1,0 +1,34 @@
+.block {
+
+    &_3 {
+        width: 100%;
+    }
+}
+.container {
+
+    &_text {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        width: 50%;
+    }
+}
+
+.text {
+    
+
+    &_element {
+        width: 10px;
+        height: 40px;
+        background-color: black;
+        margin-left: 20px;
+    }
+
+    &_heading {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 25px;
+    }
+}
