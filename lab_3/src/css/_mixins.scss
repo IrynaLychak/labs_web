@@ -1,0 +1,89 @@
+@use 'sass:map';
+
+$breack-points: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+
+$path-fonts: 'path/to/fonts/';
+
+@mixin font-face($font-family, $font-file-name, $font-weight: 500, $font-style: normal, $path-fonts: $path-fonts) {
+    @font-face {
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: $font-weight;
+        src: local(''),
+        url('#{$path-fonts}#{$font-file-name}.woff2') format('woff2'),
+        url('#{$path-fonts}#{$font-file-name}.woff') format('woff');
+    }
+}
+
+@mixin placheolder($color-placeholder) {
+    &::-webkit-input-placeholder {
+        color: $color-placeholder;
+    }
+
+    &::-moz-placeholder {
+        color: $color-placeholder;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color-placeholder;
+    }
+}
+
+@mixin visuality-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@mixin grid($count: 12) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 (-$default-gap);
+    }
+
+    [class*="col-"] {
+        padding: 0 $default-gap;
+        box-sizing: border-box;
+    }
+
+    @for $i from 1 through $count {
+        $width: math.div(100%, 12) * $i;
+
+        .col-#{$i} {
+            max-width: $width;
+            width: 100%;
+            flex-basis: $width;
+        }
+    }
+
+    @each $breack-point, $breack-point-value in $breack-points {
+        @media screen and (max-width: $breack-point-value) {
+            @for $i from 1 through $count {
+                $width: 100% / 12 * $i;
+
+                .col-#{$breack-point}-#{$i} {
+                    max-width: $width;
+                    width: 100%;
+                    flex-basis: $width;
+                }
+            }
+        }
+    }
+}
+
+@mixin media($point) {
+    @media screen and (max-width: map.get($breack-points, $point)) {
+        @content;
+    }
+}

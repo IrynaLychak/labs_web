@@ -1,0 +1,25 @@
+$background-color: #F6FAFD;
+
+$default-border: 1px solid;
+
+$container-width: 1248px;
+$default-gap: 15px;
+
+$font-follback: Arial,
+Helvetica,
+sans-serif;
+$main-font-name: 'Work Sans';
+$path-fonts: '../fonts/';
+
+$main-font: $main-font-name,
+$font-follback;
+$base-font-size: 18px;
+$base-line-height: 30px;
+$base-font-weight: 500;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px
+    );
