@@ -1,0 +1,155 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+@font-face {
+    font-family: $logo-font-name;
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/work-sans-v13-latin-regular.woff2') format('woff2'),
+        url('../fonts/work-sans-v13-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gowun Dodum';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/work-sans-v13-latin-regular.woff2') format('woff2'),
+        url('../fonts/work-sans-v13-latin-regular.woff') format('woff');
+}
+
+.page {
+    background-color: $background-color;
+    font-family: $main-font-name, Arial, Helvetica, sans-serif;
+    font-size: $base-font-size;
+    font-style: normal;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    color: $font-color;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+
+    &__header {}
+
+    &__main {}
+
+    &__footer {}
+
+    @include media ('sm') {
+        font-size: 16px;
+    }
+
+    @include media ('xs') {
+        font-size: 18px;
+    }
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0;
+
+    &__row {}
+}
+
+.row {
+    margin: 0 - ($default-gap);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media ('xs') {}
+
+    &__col {}
+}
+
+[class*="col_"] {
+    padding: 0 $default-gap;
+    box-sizing: border-box;
+}
+
+.col_1 {
+    width: calc(100% / 12 *1);
+}
+
+.col_2 {
+    width: calc(100% / 12 *2);
+}
+
+.col_3 {
+    width: calc(100% / 12 *3);
+
+    @include media ('sm') {
+          width: 100%;  
+    }
+
+}
+
+.col_4 {
+    width: calc(100% / 12 *4);
+
+}
+
+.col_5 {
+    width: calc(100% / 12 *5);
+}
+
+.col_6 {
+    width: 50%;
+}
+
+.col_7 {
+    width: calc(100% / 12 *7);
+}
+
+.col_8 {
+    width: calc(100% / 12 *8);
+
+}
+
+.col_9 {
+    width: calc(100% / 12 *9);
+}
+
+.col_10 {
+    width: calc(100% / 12 *10);
+}
+
+.col_11 {
+    width: calc(100% / 12 *11);
+}
+
+.col_12 {
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 .7px #212353, 0 0 .7px #212353;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+}
+
+.hero,
+.block {
+
+    @include media ('sm') {
+        
+    }
+}
+
+

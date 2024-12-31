@@ -1,0 +1,130 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.header {
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.page {
+
+    &__header {
+    }
+}
+
+.container {
+}
+
+.row {
+}
+
+.col {
+
+    &_12 {
+    }
+}
+.logo {
+
+    &__image {
+        font-family: $logo-font-name, Helvetica, sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        color: $logo;
+        padding: 10px;
+
+        @include media ('sm') {
+            margin-left: 75px;
+        }
+    }
+}
+
+.menu-wrapper {
+
+
+    &__menu {
+        display: none;
+
+        &:checked{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @include media ('sm') {
+            padding: 0 55px;
+            
+        }
+    }
+}
+
+.menu-open-input-btn {
+}
+
+.menu-open-btn {
+
+    &__line {
+    }
+}
+
+
+.menu {
+
+    &__item {
+        padding: 30px 50px;
+
+        @media (min-width: 1200px) {
+            padding: 20px 30px;
+
+            &:not(:nth-last-child(2)){
+                border-bottom: 1px solid gray;
+            }
+    
+            &:last-child{
+                border: none;
+                padding-top: 0;
+            }
+        }
+
+        @include media ('sm') {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+
+        &:not(:nth-last-child(2)){
+            border-bottom: 1px solid gray;
+        }
+
+        &:last-child{
+            border: none;
+            padding-top: 0;
+        }
+    }
+}
+
+    &__link {
+        color: $block-blue;
+
+        &:hover {
+            color: orange;
+        }
+    }
+
+    &__btn {
+    }
+}
+
+.btn {
+
+    &_min {
+        
+    }
+
+    &_sing {
+    }
+}

@@ -1,0 +1,41 @@
+$background-color: #F6FAFD;
+$gray-color: #4B5D68;
+$white-color: #fff;
+$yellow-color: #f1c50e;
+$darkgray-color: #333333;
+$navy-color: #0d244b;
+$logo-color: #9d9d9d;
+$black-color: black;
+$small-block-color: #f5f7fa;
+
+
+$block-yellow:$yellow-color;
+$block-blue: $navy-color;
+
+$logo: $logo-color;
+$block-footer: $darkgray-color;
+$btn: $white-color;
+$font-color: $black-color;
+
+$default-border: 1px solid;
+
+$container-width: 1248px;
+$default-gap: 15px;
+
+$font-follback: Arial,
+Helvetica,
+sans-serif;
+$main-font-name: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+$path-fonts: '../fonts/';
+$logo-font-name: 'Telex';
+
+$main-font: $logo-font-name,
+$font-follback;
+$base-font-size: 18px;
+$base-line-height: 30px;
+$base-font-weight: 500;
+
+$breack-points: ("lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px);
