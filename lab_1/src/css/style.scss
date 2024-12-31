@@ -1,0 +1,106 @@
+@use 'sass:math';
+@use 'normalize';
+@use 'global';
+@use 'block1';
+@use 'block2';
+@use 'block3';
+@use 'block4';
+@use 'block5';
+@use 'block6';
+
+img {
+
+}
+
+.header{
+    
+}
+
+.block {
+    
+}
+
+.block_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%; 
+    height: 75%;
+    background-image: url('../images/waves.jpg');
+}
+
+.block_2 {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 75%; 
+    height: 25%;
+    background-color: #9ec3d8 ;
+}
+
+.block_3 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%; 
+    height: 10%;
+    background-color: #afcde3;
+}
+
+.block_4 {
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    width: 25%; 
+    height: 50%;
+    background-color: #DFF0D8;
+    background-image: url('../images/bird.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.block_5 {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 50%; 
+    height: 40%;
+    background-color: #FFFFFF;
+}
+
+.block_6 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 25%;
+    background-color: #9ec3d8;
+    background-image: url('../images/mountain.jpg');
+}
+
+.block-background {
+
+    &_1{
+        background-image: url('../images/1.jpg');
+    }
+
+    &_2{
+        background-image: url('../images/2.jpg');
+    }
+
+    &_3{
+        background-image: url('../images/3.jpg');
+    }
+
+    &_4{
+        background-image: url('../images/4.jpg');
+    }
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
