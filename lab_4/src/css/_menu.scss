@@ -1,0 +1,120 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.btn {
+    font-weight: bold;
+    color: black;
+    background-color: orange;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    display: inline-block;
+    min-width: 175px;
+    text-align: center;
+    text-decoration: none;
+
+    &_min {
+        min-width: 110px;
+        font-weight: 500;
+    }
+
+    &_sing {
+        background-color: white;
+        border: 1px solid orange;
+        color: black;
+        margin-left: 30px;
+        margin-right: 15px;
+        margin: 0 20px;
+    }
+}
+
+.menu-open-input-btn {
+    
+    @include visuality-hidden;
+
+    &:checked {
+        &~.menu {
+            position: fixed;
+            top: 76px;
+            left: 0;
+            width: 100%; 
+            height: 100%;
+            background-color: #fff; 
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Тінь */
+            transform: translateX(-100%); /* Спочатку меню приховане */
+            transition: transform 0.3s ease; /* Плавне відкриття */
+
+            @media (min-width: 1200px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                font-size: 24px;
+                font-weight: bold;
+                top: 0;
+                left: 63%;
+                width: 300px;
+                height: 500px;
+                background-color: white;
+                transform: translateY(0);
+                z-index: 2;
+            }
+
+            @include media ('sm') {
+                display: block;
+                background-color: white;
+                transform: translateX(0);
+                z-index: 2;
+            }
+
+        }
+    }
+
+}
+
+.menu-open-btn {
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+
+    @include media ('sm') {
+        display: flex;
+        margin: 0;
+        margin-right: 75px;
+    }
+
+    @include media ('xl') {
+            //justify-content: end;
+    }
+
+    &__line {
+        height: 4px;
+        width: 71%;
+        background-color: black;
+        display: block;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+        }
+
+        &::before {
+            top: -10px;
+        }
+
+        &::after {
+            bottom: -10px;
+        }
+    }
+}

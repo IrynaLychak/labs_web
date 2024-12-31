@@ -1,0 +1,16 @@
+@use 'sass:math';
+@use 'vars' as *;
+@use 'mixins' as *;
+@use 'normalize';
+@use 'global';
+@use 'header';
+@use 'block-blue';
+@use 'block-yellow';
+@use 'footer';
+@use 'mobile';
+@use 'menu';
+
+
+.page {
+    //background-color: aqua;
+}

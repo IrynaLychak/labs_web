@@ -1,0 +1,100 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.block {
+
+    &_yellow {
+        background-color: $yellow-color;
+        padding: 50px 100px 50px;
+        height: 80%;
+
+        @include media ('sm') {
+            padding: 50px 100px 0;
+            max-height: 1200px;
+        }
+    }
+}
+.container {
+
+    &__row {
+    }
+}
+.hero {
+
+    &__container {
+
+        @include media ('sm') {
+            margin-top: 75px;
+        }
+        
+    }
+
+    &__row{
+        
+        @include media ('sm') {
+            padding: 0;
+        }
+        
+    }
+}
+.row {
+
+    &__col {
+    }
+}
+.col {
+
+    &_3 {
+
+    }
+}
+.image-wrapper {
+
+    padding: 0;
+
+    @include media ('sm') {
+        padding: 10px 0;
+    }
+
+    &__img {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.75);
+        position: relative;
+        margin-top: -50px; /* Підтягує секцію до верхньої частини */
+        z-index: 1;
+        
+        @include media ('sm') {
+            //margin-bottom: 100px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.img {
+}
+
+.img-top{
+    position: relative;
+    top: 90px; /* Тінь виводить зображення назовні */
+    left: 14%;
+    transform: translateX(-50%);
+
+    @include media ('sm') {
+        top: 0;
+        left: 50%;
+        
+    }
+    
+}
+
+.img-bottom{
+    position: relative;
+    top: 170px; /* Тінь виводить зображення назовні */
+    left: 14%;
+    transform: translateX(-50%);
+
+    @include media ('sm') {
+        top: 0;
+        left: 50%;
+        
+    }
+}

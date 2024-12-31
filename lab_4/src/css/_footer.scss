@@ -1,0 +1,58 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.footer {
+    
+    // .footer__container
+
+    &__container {
+       
+    }
+}
+.page {
+
+    // .page__footer
+
+    &__footer { 
+        background-color: $darkgray-color;
+        padding: 100px 0;
+    }
+}
+.container {
+
+    // .container__row
+
+    &__row {
+    }
+}
+.row {
+
+    // .row__col
+
+    &__col {
+    }
+}
+.footer-text {
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    // .footer-text__text
+
+    &__text {
+        color: $white-color;
+        font-size: 14px;
+        width: 38%;
+
+        @include media ('sm') {
+            width: 48%;
+        }
+    }
+}
+.col {
+
+    // .col_12
+
+    &_12 {
+    }
+}
